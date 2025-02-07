@@ -1,0 +1,11 @@
+# Ignore a pasta venv
+venv/
+
+# Ignore arquivos temporários do sistema
+*.log
+*.tmp
+.DS_Store
+
+# Ignore arquivos de compilação
+*.pyc
+__pycache__/

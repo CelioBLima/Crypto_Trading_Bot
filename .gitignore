@@ -1,6 +1,9 @@
 # Ignore a pasta venv
 venv/
 
+# Ignore arquivo de API
+.env
+
 # Ignore arquivos temporários do sistema
 *.log
 *.tmp

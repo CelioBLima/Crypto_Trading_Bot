@@ -2,6 +2,10 @@ import os
 import pandas as pd
 from binance.client import Client
 from binance.exceptions import BinanceAPIException
+
+import sys
+# Adiciona o diretório raiz do projeto ao sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from config.settings import API_KEY, API_SECRET
 
 # Conectar à API da Binance

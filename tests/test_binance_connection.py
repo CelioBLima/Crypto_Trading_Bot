@@ -6,10 +6,6 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from config.settings import API_KEY, API_SECRET
 
-
-print(API_KEY)
-print(API_SECRET)
-
 # Inicialize o cliente da Binance
 client = Spot(api_key=API_KEY, api_secret=API_SECRET)
 

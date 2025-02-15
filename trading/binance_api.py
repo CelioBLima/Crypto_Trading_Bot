@@ -29,13 +29,17 @@ def get_candlestick_data(symbol="BTCUSDT", interval=Client.KLINE_INTERVAL_1HOUR,
             "close_time", "quote_asset_volume", "number_of_trades",
             "taker_buy_base", "taker_buy_quote", "ignore"
         ])
-
+        # imprimir colunas
+        # print(df.columns.tolist())
+        
         # Converter para tipos numéricos
         df["timestamp"] = pd.to_datetime(df["timestamp"], unit="ms")
         df[["open", "high", "low", "close", "volume"]] = df[["open", "high", "low", "close", "volume"]].astype(float)
 
         # Manter apenas colunas relevantes
         df = df[["timestamp", "open", "high", "low", "close", "volume"]]
+
+        # print(df.columns.tolist())
 
         return df
 

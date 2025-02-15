@@ -14,4 +14,4 @@ SYMBOL = "BTCUSDT"
 INTERVAL = "1m"  # 1 minuto
 
 # Número de candles a serem coletados
-CANDLE_LIMIT = 10
+CANDLE_LIMIT = 60

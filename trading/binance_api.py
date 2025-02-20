@@ -2,16 +2,15 @@ import os
 import pandas as pd
 from binance.client import Client
 from binance.exceptions import BinanceAPIException
-
 import sys
 # Adiciona o diretório raiz do projeto ao sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from config.settings import API_KEY, API_SECRET
+from config.settings import API_KEY, API_SECRET, SYMBOL, INTERVAL, CANDLE_LIMIT
 
 # Conectar à API da Binance
 client = Client(API_KEY, API_SECRET)
 
-def get_candlestick_data(symbol="BTCUSDT", interval=Client.KLINE_INTERVAL_1HOUR, limit=100):
+def get_candlestick_data(symbol=SYMBOL, interval=INTERVAL, limit=CANDLE_LIMIT):
     """
     Coleta dados de candlesticks (Klines) da Binance para um determinado par de negociação.
 

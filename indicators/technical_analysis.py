@@ -1,7 +1,9 @@
 import pandas as pd
 import ta
+from config.settings import COLUMN, PERIODS, SHORT_PERIOD, LONG_PERIOD, SIGNAL_PERIOD
 
-def calculate_ema(data: pd.DataFrame, column: str = 'close', period: int = 14) -> pd.Series:
+
+def calculate_ema(data: pd.DataFrame, column: str = COLUMN, period: int = PERIODS) -> pd.Series:
     """
     Calcula a EMA (Média Móvel Exponencial) e adiciona as colunas ao DataFrame original.
     
@@ -24,7 +26,7 @@ def calculate_ema(data: pd.DataFrame, column: str = 'close', period: int = 14) -
     return data    
 
 
-def calculate_rsi(data: pd.DataFrame, column: str = 'close', period: int = 14) -> pd.Series:
+def calculate_rsi(data: pd.DataFrame, column: str = COLUMN, period: int = PERIODS) -> pd.Series:
     """
     Calcula o RSI (Índice de Força Relativa) e adiciona as colunas ao DataFrame original.
     
@@ -49,8 +51,8 @@ def calculate_rsi(data: pd.DataFrame, column: str = 'close', period: int = 14) -
 
 
 
-def calculate_macd2(data: pd.DataFrame, column: str = 'close', 
-                   short_period: int = 12, long_period: int = 26, signal_period: int = 9) -> pd.DataFrame:
+def calculate_macd2(data: pd.DataFrame, column: str = COLUMN, 
+                   short_period: int = SHORT_PERIOD, long_period: int = LONG_PERIOD, signal_period: int = SIGNAL_PERIOD) -> pd.DataFrame:
     """
     Calcula o MACD (Moving Average Convergence Divergence) para os preços de uma coluna.
     
@@ -76,8 +78,8 @@ def calculate_macd2(data: pd.DataFrame, column: str = 'close',
     return df_macd
 
 
-def calculate_macd(data: pd.DataFrame, column: str = 'close', 
-                   short_period: int = 12, long_period: int = 26, signal_period: int = 9) -> pd.DataFrame:
+def calculate_macd(data: pd.DataFrame, column: str = COLUMN, 
+                   short_period: int = SHORT_PERIOD, long_period: int = LONG_PERIOD, signal_period: int = SIGNAL_PERIOD) -> pd.DataFrame:
     """
     Calcula o MACD (Moving Average Convergence Divergence) e adiciona as colunas ao DataFrame original.
     

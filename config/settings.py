@@ -10,8 +10,8 @@ API_KEY = os.getenv('BINANCE_API_KEY')
 API_SECRET = os.getenv("BINANCE_API_SECRET")
 
 # Configuração do par de moedas e intervalo de tempo
-#SYMBOL = "BTCUSDT"
-SYMBOL = "ETHUSDT"
+SYMBOL = "BTCUSDT"
+#SYMBOL = "ETHUSDT"
 # INTERVAL = "1h"  # 1 hora
 INTERVAL = Client.KLINE_INTERVAL_1MINUTE
 
@@ -22,7 +22,9 @@ COLUMN = 'close'
 CANDLE_LIMIT = 80
 
 # O número de períodos a serem considerados para o cálculos de EMA e RSI
-PERIODS = 14
+#PERIODS = 14
+EMA_PERIOD = 14
+RSI_PERIOD = 14
 
 # Valores para calculo do MACD
 # short_period: Período curto para a média móvel (default: 12).

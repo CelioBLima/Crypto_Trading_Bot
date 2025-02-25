@@ -1,9 +1,9 @@
 import pandas as pd
 import ta
-from config.settings import COLUMN, PERIODS, SHORT_PERIOD, LONG_PERIOD, SIGNAL_PERIOD
+from config.settings import COLUMN, EMA_PERIOD, RSI_PERIOD, SHORT_PERIOD, LONG_PERIOD, SIGNAL_PERIOD
 
 
-def calculate_ema(data: pd.DataFrame, column: str = COLUMN, period: int = PERIODS) -> pd.Series:
+def calculate_ema(data: pd.DataFrame, column: str = COLUMN, period: int = EMA_PERIOD) -> pd.Series:
     """
     Calcula a EMA (Média Móvel Exponencial) e adiciona as colunas ao DataFrame original.
     
@@ -26,7 +26,7 @@ def calculate_ema(data: pd.DataFrame, column: str = COLUMN, period: int = PERIOD
     return data    
 
 
-def calculate_rsi(data: pd.DataFrame, column: str = COLUMN, period: int = PERIODS) -> pd.Series:
+def calculate_rsi(data: pd.DataFrame, column: str = COLUMN, period: int = RSI_PERIOD) -> pd.Series:
     """
     Calcula o RSI (Índice de Força Relativa) e adiciona as colunas ao DataFrame original.
     
